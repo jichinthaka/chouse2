@@ -34,8 +34,8 @@ class FaceAttendanceController extends Controller
 
 
 
-//        return $this->render('ionic/tabs.html.twig',array(
-//            'name' => 'Fabien'));
+        return $this->render('ionic/tabs.html.twig',array(
+            'name' => 'Fabien'));
 //        return '<img src=$file>';?
 
 
