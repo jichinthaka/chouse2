@@ -30,7 +30,7 @@ class FaceAttendanceController extends Controller
         $file = $request->files;
 //        $file = $request->files->all()['files']['0'];
 //        $file->
-        $uf->move($this->get('kernel')->getRootDir() . '/../web' . $this->getRequest()->getBasePath(),$file);
+        $uf->move($this->get('kernel')->getRootDir() . '/../web',$file);
 
 
 
