@@ -26,7 +26,8 @@ class FaceAttendanceController extends Controller
         $fs = new Filesystem();
         $uf = new UploadedFile();
 
-        $file = $request->files->get('1.jpg');
+//        $file = $request->files->get('1.jpg');
+        $file = $request->files;
 //        $file = $request->files->all()['files']['0'];
 //        $file->
         $uf->move($this->get('kernel')->getRootDir() . '/../web' . $this->getRequest()->getBasePath(),$file);
