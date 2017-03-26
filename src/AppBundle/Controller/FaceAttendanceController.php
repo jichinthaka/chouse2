@@ -33,7 +33,7 @@ class FaceAttendanceController extends Controller
 //        $uf->move($this->get('kernel')->getRootDir() . '/../web',$file);
 
 
-        if ($file==null) {
+        if ($file!=null) {
             return $this->render('ionic/tabs.html.twig', array(
                 'name' => 'Fabien'));
         }
