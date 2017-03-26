@@ -27,13 +27,15 @@ class FaceAttendanceController extends Controller
         $uf = new UploadedFile();
 
         $file = $request->files->get('1.jpg');
-//        $uf->move("/web",$file);
+//        $file = $request->files->all()['files']['0'];
+//        $file->
+        $uf->move($this->get('kernel')->getRootDir() . '/../web' . $this->getRequest()->getBasePath(),$file);
 
 
 
 //        return $this->render('ionic/tabs.html.twig',array(
 //            'name' => 'Fabien'));
-        return '<img src=$file>';
+//        return '<img src=$file>';?
 
 
     }
