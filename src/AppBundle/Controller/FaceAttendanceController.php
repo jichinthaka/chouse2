@@ -21,6 +21,8 @@ class FaceAttendanceController extends Controller
 
         $file = $request->files->get('1.jpg');
 
+        return $this->render('ionic/tabs.html.twig');
+
 
     }
 
