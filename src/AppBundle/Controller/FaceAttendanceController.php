@@ -11,13 +11,15 @@ namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
 class FaceAttendanceController extends Controller
 {
     /**
      * @Route("/upload")
      */
-    public function homePage(Request $request){
+    public function getFile(Request $request){
 
         $file = $request->files->get('1.jpg');
 
