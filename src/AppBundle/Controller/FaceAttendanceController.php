@@ -34,7 +34,7 @@ class FaceAttendanceController extends Controller
 //        $uf->move($this->get('kernel')->getRootDir() . '/../web',$file);
 
         // Generate a unique name for the file before saving it
-        $fileName = md5(uniqid()).'.'.$file->guessExtension();
+        $fileName = md5(uniqid()).'.'.$file[0]->guessExtension();
         $file->move($this->get('kernel')->getRootDir() . '/../web',$fileName);
 
         if ($file!=null) {
