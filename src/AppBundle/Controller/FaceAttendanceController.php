@@ -40,7 +40,7 @@ class FaceAttendanceController extends Controller
 
         // Generate a unique name for the file before saving it
 //        $fileName = md5(uniqid()).'.'.$file[0]->guessExtension();
-        $file->move($this->get('kernel')->getRootDir() . '/../web',"222.jpg");
+//        $file->move($this->get('kernel')->getRootDir() . '/../web',"222.jpg");
 
         if ($file!=null) {
             return $this->render('ionic/tabs.html.twig', array(
