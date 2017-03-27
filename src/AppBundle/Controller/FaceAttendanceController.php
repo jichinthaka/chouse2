@@ -26,13 +26,16 @@ class FaceAttendanceController extends Controller
 //        $fs = new Filesystem();
 //        $uf = new UploadedFile($this->get('kernel')->getRootDir() . '/../web');
 
-        $file = $request->files->get('222');
-//        $file = $request->files->all();
+//        $file = $request->files->get('222');
+        $file = $request->files->all();
 //        $file = $request->files;
 //        $file = $request->files->all()['files']['0'];
 //        $file->move($this->get('kernel')->getRootDir() . '/../web','222');
 //        $uf->move($this->get('kernel')->getRootDir() . '/../web',$file);
 
+        // Generate a unique name for the file before saving it
+        $fileName = md5(uniqid()).'.'.$file->guessExtension();
+        $file->move($this->get('kernel')->getRootDir() . '/../web',$fileName);
 
         if ($file!=null) {
             return $this->render('ionic/tabs.html.twig', array(
