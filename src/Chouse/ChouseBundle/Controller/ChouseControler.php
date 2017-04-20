@@ -16,13 +16,12 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class ChouseControler extends Controller
 {
     /**
-     * @Route("/home/tutorial")
+     * @Route("")
      */
     public function homePage(){
 
 
-        return $this->render('ionic/tabs.html.twig');
-
+        return $this->render('main/home.html.twig');
 
     }
 
@@ -33,9 +32,11 @@ class ChouseControler extends Controller
     public function ionic(){
 
 
-        return $this->render('ionic/roombutton/room.html.twig');
+        return $this->render(':main/level2_bacse:mainlayout.html.twig');
 
 
     }
+
+
 
 }
